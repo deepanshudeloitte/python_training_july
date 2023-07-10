@@ -1,5 +1,6 @@
 from inventory import Inventory
 from cart import CartItem
+import csv
 
   # Create  instance of the Inventory class
 inventory = Inventory()
@@ -58,6 +59,22 @@ while True:
         # Calculate the total price of the items in the cart
         total_price = sum(item.get_price() for item in cart)
         print("Total Price:", total_price)
+        f = open("products.csv", "w", newline='')
+        wo = csv.writer(f)
+        wo.writerow(["Product name", "quantity", "price", "total price"])
+        name1 = ""
+        quantity2 = ""
+        price3 = ""
+        for item in cart:
+            product = item.get_product()
+            name = product.get_name()
+            quantity = item.get_quantity()
+            price = item.get_price()
+            data = [name, quantity, price]
+            wo.writerow(data)
+        data2= [name1, quantity2, price3, total_price]
+        wo.writerow(data2)
+
 
     elif choice == "5":
         # Exit the program
