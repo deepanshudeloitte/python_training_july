@@ -1,0 +1,19 @@
+there are total 4 classes in the main Assignment
+  
+1.  inevntory.py
+		- inventory class contains all the products. for add to cart and for different types of functionality
+2.  product.py 
+             - this class contains products properties
+3.  cart.py
+            -this class contains cart properties
+4.  cli.py
+           - cli class is the main class which perform all the functionality.
+
+
+
+
+Run the cli.py class, it'll will ask for your input to perform various functionality.
+such as, browse product , add to cart and etc.
+ 
+when user give the input 5 for cli.py class it'll exit and Create a csv file which shows your checkout items with total price.
+path of the csv file is :- python_training_july\mainAssignment
